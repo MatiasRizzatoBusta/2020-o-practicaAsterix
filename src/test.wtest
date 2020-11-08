@@ -36,7 +36,7 @@ test "una persona toma una pocion"{
 	
 }
 
-test "la legion2 ataca a sujetoK"{
+test "la legion2 ataca a sujetoK y sus primeros 3 integrantes y el sujetoK quedan fuera de servicio"{
 	legion2.luchar(sujetoK)
 	sujetoK.luchar(legion2)
 	assert.that(sujetoK.fueraDeCombate())

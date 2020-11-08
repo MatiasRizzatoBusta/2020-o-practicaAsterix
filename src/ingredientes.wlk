@@ -3,8 +3,6 @@ import pociones.*
 class Ingrediente { //como tengo que agregar muchos con facilidad la hago clase
 	
 	method bonificacion(persona,pocion)
-	
-	
 }
 
 object dulceDeLeche inherits Ingrediente{
