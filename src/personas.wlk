@@ -37,15 +37,3 @@ class Persona {
 	method tomarPocion(pocion) = pocion.aplicarEfecto(self)
 	
 }
-
-
-class Ejercito{
-	var integrantes = []
-}
-
-class Legion{ //polimorfico con ejercito
-	var formacion
-	
-}
-
-// hacer las formaciones como objetos y que sean polimorficas(armar una interfaz)
