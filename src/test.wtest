@@ -1,0 +1,23 @@
+import pociones.*
+import ingredientes.*
+import personas.*
+
+const sujetoP = new Persona(resistencia = 60,fuerza = 88)
+const unGrog = new Grog()
+const unaPocion = new Pocion(ingredientes = [dulceDeLeche,unGrog])
+
+test "el poder de una persona"{
+	assert.equals(5280,sujetoP.poder())
+}
+
+test "una persona recibe danio" {
+	sujetoP.recibirDanio(10)
+	assert.equals(50,sujetoP.resistencia())
+
+}
+
+test "una persona toma una pocion"{
+	sujetoP.tomarPocion(unaPocion)
+	assert.equals(100,sujetoP.fuerza())
+	
+}
