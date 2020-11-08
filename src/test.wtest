@@ -1,10 +1,24 @@
 import pociones.*
 import ingredientes.*
 import personas.*
+import ejercitos.*
 
 const sujetoP = new Persona(resistencia = 60,fuerza = 88)
+const sujetoA = new Persona(resistencia = 60,fuerza = 88)
+const sujetoB = new Persona(resistencia = 60,fuerza = 88)
+const sujetoC = new Persona(resistencia = 60,fuerza = 88)
+const sujetoD = new Persona(resistencia = 60,fuerza = 88)
+const sujetoE = new Persona(resistencia = 60,fuerza = 88)
+const sujetoF = new Persona(resistencia = 60,fuerza = 88)
+const sujetoG = new Persona(resistencia = 60,fuerza = 88)
+const sujetoH = new Persona(resistencia = 60,fuerza = 88)
+const sujetoI = new Persona(resistencia = 60,fuerza = 88)
+const sujetoJ = new Persona(resistencia = 60,fuerza = 88)
+const sujetoK = new Persona(resistencia = 60,fuerza = 88)
+const sujetoL = new Persona(resistencia = 60,fuerza = 88)
 const unGrog = new Grog()
 const unaPocion = new Pocion(ingredientes = [dulceDeLeche,unGrog])
+const legion2 = new Legion(integrantes = [sujetoA,sujetoB,sujetoC,sujetoD,sujetoP,sujetoE],formacion = fontemAllargate)
 
 test "el poder de una persona"{
 	assert.equals(5280,sujetoP.poder())
@@ -20,4 +34,14 @@ test "una persona toma una pocion"{
 	sujetoP.tomarPocion(unaPocion)
 	assert.equals(100,sujetoP.fuerza())
 	
+}
+
+test "la legion2 ataca a sujetoK"{
+	legion2.luchar(sujetoK)
+	sujetoK.luchar(legion2)
+	assert.that(sujetoK.fueraDeCombate())
+	assert.equals(15840,legion2.poder())
+	assert.that(sujetoA.fueraDeCombate())
+	assert.that(sujetoB.fueraDeCombate())
+	assert.that(sujetoC.fueraDeCombate())
 }

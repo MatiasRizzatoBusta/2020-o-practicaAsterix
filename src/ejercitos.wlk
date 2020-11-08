@@ -43,7 +43,7 @@ class Ejercito{
 	
 	method luchar(contrincante){
 		if(self.fueraDeServicio()){
-			self.error("Todos estan fuera de servicio")
+			self.error("Fuera de servicio")
 		}else{
 		const menosPoderoso = self.losMasPoderosos().last() 
 		const diferenciaPoder = self.poder() - contrincante.poder()

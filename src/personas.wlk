@@ -36,4 +36,13 @@ class Persona {
 	
 	method tomarPocion(pocion) = pocion.aplicarEfecto(self)
 	
+	method luchar(contrincante){
+		if(self.fueraDeCombate()){
+			self.error("Fuera de servicio")
+		}else{
+			self.recibirDanio(contrincante.poder())
+		
+		}
+	}
+	
 }
